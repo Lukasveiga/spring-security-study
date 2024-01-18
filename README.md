@@ -23,7 +23,7 @@
 The projects will be developed in different folders from basic authentication to Oauth 2. Following the order shown below.
 
 <ol>
-    <li><a href="">Basic Authentication using email and password</a></li>
+    <li><a href="https://github.com/Lukasveiga/spring-security-study/tree/main/basic-authentication">Basic Authentication using email and password</a></li>
     <li><a href="">Basic Authentication and Authorization using email, password and roles</a></li>
     <li><a href="">Authentication with Json Web Token (JWT)</a></li>
     <li><a href="">Third party authentication with Oauth 2</a></li>
