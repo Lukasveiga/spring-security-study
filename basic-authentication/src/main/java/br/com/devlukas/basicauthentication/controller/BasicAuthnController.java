@@ -19,7 +19,7 @@ public class BasicAuthnController {
 
 
     @PostMapping("/singup")
-    public ResponseEntity<String> singup(@RequestBody @Valid UserRequestBodyDTO userRequestBodyDTO) {
+    public ResponseEntity<String> singUp(@RequestBody @Valid UserRequestBodyDTO userRequestBodyDTO) {
         userService.registerUser(userRequestBodyDTO.toEntity());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body("User %s successfully registered!".formatted(userRequestBodyDTO.username()));

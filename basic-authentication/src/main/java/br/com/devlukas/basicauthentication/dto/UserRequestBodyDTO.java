@@ -8,13 +8,12 @@ import jakarta.validation.constraints.Pattern;
 
 public record UserRequestBodyDTO(
 
-        @Email(message = "Provide a valid email.")
-        @NotBlank(message = "Username cannot be blank.")
+        @Email(message = "Provide a valid email")
+        @NotBlank(message = "Username cannot be blank")
         String username,
 
-        @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+        @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}\\[\\]:;<>,.?~\\\\-]).{8,}$",
         message = "Password requires at least 8 characters, with numbers, upper and lower case letters and special characters")
-        @NotNull(message = "Password cannot be null.")
         String password) {
 
     public User toEntity() {
